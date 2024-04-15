@@ -29,9 +29,9 @@
 /* _____________ 여기에 코드 입력 _____________ */
 
 /**
- * 1. Mapped type에 `keyof (F & S)` 또는 `keyof F | keyof S`를 사용하여 두 타입의 키를 가져온다.
- * 2. `P`가 `S`에 있는 경우 `S[P]`를 반환한다.
- * 3. `P`가 `F`에 있는 경우 `F[P]`를 반환한다.
+ * 1. Mapped type에 `keyof (F & S)` 또는 `keyof F | keyof S`를 사용하여 두 타입의 키 P에 할당하여 가져온다.
+ * 2. 타입 `P`가 `S`를 만족하는 경우 `S[P]`를 반환한다.
+ * 3. 타입 `P`가 `F`를 만족하는 경우 `F[P]`를 반환한다.
  * 4. 그렇지 않은 경우 `never`를 반환한다.
  */
 type Merge<F extends Record<PropertyKey, unknown>, S extends Record<PropertyKey, unknown>> = {
